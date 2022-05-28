@@ -35,13 +35,11 @@ export function DetalhesdoProduto({route}) {
             color='#DB7093'
             title="Adicionar ao Carrinho" />
            </View>
+
            <Image
            style={styles.imagemanuncio}
            source={require('../assets/anuncieaqui.png')}
              />
-           <View style={styles.anuncieaqui}>
-              
-             </View>
 
       </ScrollView>
     </SafeAreaView>
@@ -49,7 +47,7 @@ export function DetalhesdoProduto({route}) {
 }
 
 const styles = StyleSheet.create({
-  card: {
+  cartao: {
     backgroundColor: 'white',
     borderRadius: 16,
     shadowOpacity: 0.2,
@@ -94,6 +92,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-
   },
+
+  imagemanuncio:{
+
+  }
 });

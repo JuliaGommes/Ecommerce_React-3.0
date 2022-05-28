@@ -20,7 +20,7 @@ function renderItem({item}) {
     return (
        <View style={styles.linhaCarrinho}>
           <Text style={styles.linhaEsquerda}>{item.produto.nome} x {item.qtd}</Text>
-          <Text style={styles.linhaDireita}>$ {item.precoTotal}</Text>
+          <Text style={styles.linhaDireita}>R$ {item.precoTotal}</Text>
        </View>
     );
   }

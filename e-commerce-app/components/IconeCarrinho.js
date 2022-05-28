@@ -16,9 +16,10 @@ export function IconeCarrinho({navigation}) {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 8,
+    marginRight: -4,
     backgroundColor: '#FFB6C1',
-    height: 50,
-    padding: 5,
+    height: 40,
+    padding: 2,
     borderRadius: 32 / 2,
     alignItems: 'center',
     justifyContent: 'center',

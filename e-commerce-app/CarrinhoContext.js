@@ -1,10 +1,10 @@
 import React, {createContext, useState} from 'react';
 import { getProduto } from './servicos/ServicoProduto.js';
 export const CarrinhoContexto = createContext();
-export function CartProvider(props) {
+export function ProvedorCarrinho(props) {
   const [items, setItems] = useState([]);
 
-  function addItemToCart(id) {
+  function addItemCarrinho(id) {
     const produto = getProduto(id);
     setItems((prevItems) => {
       const item = prevItems.find((item) => (item.id == id));
@@ -37,7 +37,7 @@ function getContagemItem() {
 
   return (
     <CarrinhoContexto.Provider 
-      value={{items, setItems, getContagemItem, addItemToCart, getprecoTotal}}>
+      value={{items, setItems, getContagemItem, addItemCarrinho, getprecoTotal}}>
       {props.children}
     </CarrinhoContexto.Provider>
   );

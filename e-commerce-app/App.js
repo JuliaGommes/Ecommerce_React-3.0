@@ -2,28 +2,28 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ListadeProdutos } from './screens/ListaProduto.js';
-import { DetalhesdoProduto } from './screens/DetalhesProduto.js';
-import { Carrinho } from './screens/Carrinho.js';
+import { ListadeProdutos } from './telas/ListaProduto.js';
+import { DetalhesdoProduto } from './telas/DetalhesProduto.js';
+import { Carrinho } from './telas/Carrinho.js';
 import { IconeCarrinho } from './components/IconeCarrinho';
-import { CartProvider } from './CarrinhoContext.js';
+import { ProvedorCarrinho } from './CarrinhoContext.js';
 
 const Stack = createNativeStackNavigator();
 function App() {
   return (
-    <CartProvider>
+    <ProvedorCarrinho>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name='Produtos' component={ListadeProdutos} 
           options={({ navigation }) => ({
-            title: 'Produtos',
+            title: 'Loja Gamer',
             headerTitleStyle: styles.headerTitle, 
             headerRight: () => <IconeCarrinho navigation={navigation}/>
           })}/>
           <Stack.Screen name='DetalhesProduto' component={DetalhesdoProduto} 
           options={({ navigation }) => ({
             title: 'Detalhes',
-            headerTitleStyle: styles.headerTitle,
+            headerTitleStyle: styles.headerDetalhes,
             headerRight: () => <IconeCarrinho navigation={navigation}/>,
           })} />
           <Stack.Screen name='Carrinho' component={Carrinho} 
@@ -34,12 +34,13 @@ function App() {
           })} />
         </Stack.Navigator>
       </NavigationContainer>
-    </CartProvider>
+    </ProvedorCarrinho>
   );
 }
 const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 20,
+    fontWeight: 'bold',
     marginHorizontal: 50,
     backgroundColor: '#DB7093',
     height: 45,
@@ -47,6 +48,12 @@ const styles = StyleSheet.create({
     borderRadius: 35 / 2,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  headerDetalhes: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    
   }
+
 });
 export default App;

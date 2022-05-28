@@ -2,12 +2,12 @@ import React from 'react';
 import {Text, Image, View, StyleSheet, TouchableOpacity} from 'react-native';
 export function Produto({nome, preco, imagem, onPress}) {
   return (
-    <TouchableOpacity style={styles.card} onPress={onPress}>
+    <TouchableOpacity style={styles.cartao} onPress={onPress}>
       <Image
-        style={styles.thumb}
+        style={styles.imagem1}
         source={imagem}
       />
-      <View style={styles.infoContainer}>
+      <View style={styles.informacaoContainer}>
         <Text style={styles.nome}>{nome}</Text>
         <Text style={styles.preco}>R$ {preco}</Text>
       </View>
@@ -15,7 +15,7 @@ export function Produto({nome, preco, imagem, onPress}) {
   );
 }
 const styles = StyleSheet.create({
-  card: {
+  cartao: {
     backgroundColor: 'white',
     borderRadius: 16,
     shadowOpacity: 0.2,
@@ -28,13 +28,13 @@ const styles = StyleSheet.create({
     elevation: 1,
     marginVertical: 20,
   },
-  thumb: {
+  imagem1: {
     height: 260,
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
     width: '100%',
   },
-  infoContainer: {
+  informacaoContainer: {
     padding: 16,
   },
   nome: {
