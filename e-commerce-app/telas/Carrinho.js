@@ -10,11 +10,23 @@ const {items, getContagemItem, getprecoTotal} = useContext(CarrinhoContexto);
       setTotal(getprecoTotal());
     });
     return (
+      
        <View style={styles.linhaCarrinhoTotal}>
           <Text style={[styles.linhaEsquerda, styles.lineTotal]}>Total</Text>
           <Text style={styles.linhaDireita}>R$ {total}</Text>
-       </View>
+          <View style={styles.botaofinal}>
+                  <Button
+             onPress={() => {
+               alert('Você comprou tudo!');
+             }}
+             title="Comprar tudo"
+             color='#DB7093'
+       />
+                  </View>
+        </View>
+
     );
+
   }
 function renderItem({item}) {
     return (
@@ -22,10 +34,12 @@ function renderItem({item}) {
           <Text style={styles.linhaEsquerda}>{item.produto.nome} x {item.qtd}</Text>
           <Text style={styles.linhaDireita}>R$ {item.precoTotal}</Text>
        </View>
+       
     );
   }
 
   return (
+    
     <FlatList
       style={styles.itemsList}
       contentContainerStyle={styles.itemsListContainer}
@@ -33,8 +47,12 @@ function renderItem({item}) {
       renderItem={renderItem}
       keyExtractor={(item) => item.produto.id.toString()}
       ListFooterComponent={Totals}
+      
     />
+    
   );
+
+
 }
 const styles = StyleSheet.create({
   linhaCarrinho: { 
@@ -69,4 +87,9 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     marginHorizontal: 8,
   },
+  botaofinal: {
+    marginLeft: 80,
+    marginTop: 5,
+
+  }
 });
