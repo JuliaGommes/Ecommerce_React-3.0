@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import { Produto } from '../components/Produto.js';
-import { getProdutos } from '../services/ServicoProduto.js';
+import { getProdutos } from '../servicos/ServicoProduto.js';
 export function ListadeProdutos ({navigation}) {
 function renderProduto({item: produto}) {
     return (

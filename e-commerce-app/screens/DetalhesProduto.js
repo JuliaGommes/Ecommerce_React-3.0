@@ -1,25 +1,20 @@
 import React, {useEffect, useState, useContext} from 'react';
 import { Text, Image, View, ScrollView, SafeAreaView, Button, StyleSheet  } from 'react-native';
-import { getProduto } from '../services/ServicoProduto.js';
+import { getProduto } from '../servicos/ServicoProduto.js';
 import { CarrinhoContexto } from '../CarrinhoContext';
-
-//import Box from '@mui/material/Box';
-//import Button from '@mui/material/Button';
-
-
 
 export function DetalhesdoProduto({route}) {
   const { produtoId } = route.params;
   const [produto, setProduto] = useState({});
 
-  const { addItemToCart } = useContext(CarrinhoContexto);
+  const { addItemCarrinho } = useContext(CarrinhoContexto);
 
   useEffect(() => {
     setProduto(getProduto(produtoId));
   });
 
-  function onAddToCart() {
-    addItemToCart(produto.id);
+  function onAddCarrinho() {
+    addItemCarrinho(produto.id);
   }
 
   return (
@@ -29,21 +24,25 @@ export function DetalhesdoProduto({route}) {
           style={styles.imagem}
           source={produto.imagem}
         />
-        <View style={styles.infoContainer}>
+        <View style={styles.informacaoContainer}>
           <Text style={styles.nome}>{produto.nome}</Text>
           <Text style={styles.preco}>$ {produto.preco}</Text>
           <Text style={styles.descricao}>{produto.descricao}</Text>
           </View>
           <View style={styles.botao}>
             <Button 
-            
-            onPress={onAddToCart}
+            onPress={onAddCarrinho}
             color='#DB7093'
             title="Adicionar ao Carrinho" />
-            
+           </View>
+           <Image
+           style={styles.imagemanuncio}
+           source={require('../assets/anuncieaqui.png')}
+             />
+           <View style={styles.anuncieaqui}>
               
-              </View>
-        
+             </View>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -67,7 +66,7 @@ const styles = StyleSheet.create({
     height: 300,
     width: '100%'
   },
-  infoContainer: {
+  informacaoContainer: {
     padding: 16,
   },
   nome: {
@@ -91,7 +90,7 @@ const styles = StyleSheet.create({
     marginLeft: 50,
     width: 180,
     height: 145,
-    paddingLeft: 40,
+    paddingLeft: 50,
     alignContent: 'center',
     alignItems: 'center',
     justifyContent: 'center',

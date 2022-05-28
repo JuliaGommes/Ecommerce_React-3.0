@@ -1,5 +1,5 @@
 import React, {createContext, useState} from 'react';
-import { getProduto } from './services/ServicoProduto.js';
+import { getProduto } from './servicos/ServicoProduto.js';
 export const CarrinhoContexto = createContext();
 export function CartProvider(props) {
   const [items, setItems] = useState([]);

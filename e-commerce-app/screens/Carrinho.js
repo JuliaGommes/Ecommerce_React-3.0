@@ -12,7 +12,7 @@ const {items, getContagemItem, getprecoTotal} = useContext(CarrinhoContexto);
     return (
        <View style={styles.linhaCarrinhoTotal}>
           <Text style={[styles.linhaEsquerda, styles.lineTotal]}>Total</Text>
-          <Text style={styles.linhaDireita}>$ {total}</Text>
+          <Text style={styles.linhaDireita}>R$ {total}</Text>
        </View>
     );
   }

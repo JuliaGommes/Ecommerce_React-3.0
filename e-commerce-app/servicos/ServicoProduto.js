@@ -25,8 +25,26 @@ const PRODUTOS = [
         nome: 'Cadeira Gamer Dx Racer',
         preco: 3500,
         imagem: require('../assets/produtos/cadeira-103.jpg'),
-        descricao: 'Cadeira Gamer Profissional DXRacer'
+        descricao: 'Cadeira Gamer Profissional DXRaer'
     },
+    {
+        id: 104,
+        nome: 'Monitor Gamer',
+        preco: 1200,
+        imagem: require('../assets/produtos/monitor-104.jpg'),
+        descricao: 'Monitor Gamer 23.6 Polegadas, Full HD, HDMI/DP, FreeSync e G-Sync'
+    },
+
+    
+    {
+        id: 105,
+        nome: 'Gabinete Gamer com RGB',
+        preco: 359,
+        imagem: require('../assets/produtos/gabinete-105.jpg'),
+        descricao: 'Gabinete Gamer Couga Gemini M Silver'
+        
+    },
+
 
 
 ];
