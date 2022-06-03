@@ -17,7 +17,7 @@ const {items, getContagemItem, getprecoTotal} = useContext(CarrinhoContexto);
           <View style={styles.botaofinal}>
                   <Button
              onPress={() => {
-               Alert.alert('Você comprou tudo!','\nObrigado, volte sempre :) \n\n\n Loja Gamer');
+               Alert.alert('Você comprou tudo!','\n\nObrigado, volte sempre :) \n\n\n Loja Gamer');
              }}
              title="Comprar tudo"
              color='#DB7093'
