@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
+import { View, Text, Button, FlatList, StyleSheet, Alert } from 'react-native';
 import { CarrinhoContexto } from '../CarrinhoContext';
 export function Carrinho ({navigation}) {
 const {items, getContagemItem, getprecoTotal} = useContext(CarrinhoContexto);
@@ -17,7 +17,7 @@ const {items, getContagemItem, getprecoTotal} = useContext(CarrinhoContexto);
           <View style={styles.botaofinal}>
                   <Button
              onPress={() => {
-               alert('Você comprou tudo!');
+               Alert.alert('Você comprou tudo!','\nObrigado, volte sempre :) \n\n\n Loja Gamer');
              }}
              title="Comprar tudo"
              color='#DB7093'

@@ -8,10 +8,10 @@ const PRODUTOS = [
     },
     {
         id: 101,
-        nome: 'Teclado Mecanino Preto',
+        nome: 'Teclado Mecanino Branco',
         preco: 600,
         imagem: require('../assets/produtos/teclado-101.jpg'),
-        descricao: 'Teclado Mecanico Preto com RGB'
+        descricao: 'Teclado Mecanico Branco com RGB'
     },
     {
         id: 102,
@@ -22,10 +22,10 @@ const PRODUTOS = [
     },
     {
         id: 103,
-        nome: 'Cadeira Gamer Dx Racer',
-        preco: 3500,
+        nome: 'Cadeira Gamer Fox Racer',
+        preco: 1350,
         imagem: require('../assets/produtos/cadeira-103.jpg'),
-        descricao: 'Cadeira Gamer Profissional DXRaer'
+        descricao: 'Cadeira Gamer Profissional Fox Racer com RGB'
     },
     {
         id: 104,
@@ -38,13 +38,30 @@ const PRODUTOS = [
     
     {
         id: 105,
-        nome: 'Gabinete Gamer com RGB',
+        nome: 'Gabinete Gamer',
         preco: 359,
         imagem: require('../assets/produtos/gabinete-105.jpg'),
-        descricao: 'Gabinete Gamer Couga Gemini M Silver'
+        descricao: 'Gabinete Gamer Galax Andromeda com RGB'
         
     },
 
+    {
+        id: 106,
+        nome: 'Mouse Pad Redragon',
+        preco: 280,
+        imagem: require('../assets/produtos/mousepad-106.jpg'),
+        descricao: 'Mouse Pad Redragon Neptune com RGB 800x300mm'
+        
+    },
+
+    {
+        id: 107,
+        nome: 'Carregador Wireless',
+        preco: 480,
+        imagem: require('../assets/produtos/carregador-107.jpg'),
+        descricao: 'Carregador Wireless Trio SATECHI '
+        
+    },
 
 
 ];
